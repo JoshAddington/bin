@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Create the session to be used
+tmux new-session -d -s promote
+
+# split the window
+tmux split-window -v
+tmux split-window -h
+tmux select-pane -t 1
+tmux split-window -h
+
+# Run commands
+tmux send-keys -t 1 "cd ~/Code/nemo && docker-compose up" enter
+tmux send-keys -t 2 "cd ~/Code/nemo/promote && docker-compose up" enter
+tmux send-keys -t 3 "cd ~/Code/nemo/promote" enter
+tmux send-keys -t 4 "cd ~/Code/nemo/promote && docker stats" enter
+
+# attach to shell
+tmux select-pane -t 3
+tmux attach-session

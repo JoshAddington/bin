@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# bring all docker containers down
+cd ~/Code/nemo;
+docker-compose down;
+
+cd promote;
+docker-compose down;
+
+cd ~/Code/closer;
+docker-compose down;
+
+cd ~/Code/closer-chrome;
+docker-compose down;
+
+tmux kill-session -t promote

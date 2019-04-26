@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# clear server.pid conflict
+docker-compose run --rm app rm /home/app/tmp/pids/server.pid;
+docker-compose up;
