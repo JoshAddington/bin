@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# start promote
-~/bin/run/nemo-vagrant;

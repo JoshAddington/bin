@@ -6,6 +6,8 @@ docker-compose down;
 
 cd promote;
 docker-compose down;
+docker-sync stop;
+docker-sync clear;
 
 cd ~/Code/closer;
 docker-compose down;
