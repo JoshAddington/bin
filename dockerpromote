@@ -12,10 +12,10 @@ tmux split-window -h
 
 # Run commands
 tmux send-keys -t 1 "cd ~/Code/nemo && dc up" enter
-tmux send-keys -t 2 "cd ~/Code/nemo/promote && docker-sync start && dc up" enter
-tmux send-keys -t 3 "cd ~/Code/nemo/promote && sleep 16 && drw" enter
-tmux send-keys -t 4 "cd ~/Code/nemo/promote && docker stats" enter
-tmux send-keys -t 5 "sleep 4 && cd ~/Code/nemo/promote && docker-sync logs -f | awk '/Synchronization/ { print }'" enter
+tmux send-keys -t 2 "cd ~/Code/promote && dc up" enter
+tmux send-keys -t 3 "cd ~/Code/promote" enter
+tmux send-keys -t 4 "cd ~/Code/promote && docker stats" enter
+tmux send-keys -t 5 "sleep 8 && cd ~/Code/promote && dslog" enter
 
 # attach to shell
 tmux select-pane -t 3

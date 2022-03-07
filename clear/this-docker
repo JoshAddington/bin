@@ -1,3 +1,3 @@
 
 docker-compose down;
-docker-compose up;
+DISABLE_BULLET=1 docker-compose up;

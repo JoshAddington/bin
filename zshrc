@@ -49,7 +49,7 @@ alias dra="dc stop app && dc start app"
 alias dras="dc stop assets && dc start assets"
 alias drw="dc stop web && dc start web && dra"
 
-alias dslog="docker-sync logs -f | awk '/Synchronization/ { print }'"
-alias dsreset="docker-sync stop && docker-sync clean && docker-sync start"
+# alias dslog="docker-sync logs -f | awk '/Synchronization/ { print }'"
+alias dslog="docker-compose logs -f sync | awk '/Synchronization/ { print }'"
 
 alias snaps="da rm spec/fixtures/snapshots/partner_v2_application.scss.snapshot && da rm spec/fixtures/snapshots/mini_partner_v2_application.scss.snapshot && da bin/rspec spec_redux/services/assets"
