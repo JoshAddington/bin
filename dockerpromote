@@ -18,5 +18,5 @@ tmux send-keys -t 4 "cd ~/Code/promote && docker stats" enter
 tmux send-keys -t 5 "sleep 8 && cd ~/Code/promote && dslog" enter
 
 # attach to shell
-tmux select-pane -t 3
+tmux select-pane -t 1
 tmux attach-session
